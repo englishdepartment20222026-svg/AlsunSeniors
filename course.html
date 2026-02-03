@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alsun Seniors | Course</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="logo">
+          <span class="logo-mark">AS</span>
+          <div>
+            <p class="logo-title">Alsun Seniors</p>
+            <p class="logo-subtitle">Course Details</p>
+          </div>
+        </div>
+        <nav class="topbar-nav">
+          <a href="index.html">Home</a>
+          <a href="#course-content">Course Page</a>
+          <a href="#course-posts">Posts</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="course-content" class="section course-view">
+          <div class="section-header">
+            <div>
+              <h2 id="course-title">Course Page</h2>
+              <p id="course-subtitle">A dedicated page with details, links, and post feeds.</p>
+            </div>
+            <a class="btn ghost" href="index.html">Back to courses</a>
+          </div>
+
+          <div class="course-layout">
+            <aside class="course-sidebar">
+              <h3 id="course-name">Loading...</h3>
+              <p class="muted" id="course-overview">Course overview and unlimited details.</p>
+              <div class="info-list">
+                <div>
+                  <span>Doctors</span>
+                  <strong id="course-doctors">-</strong>
+                </div>
+                <div>
+                  <span>Faculty Portal</span>
+                  <strong id="course-portal">-</strong>
+                </div>
+                <div>
+                  <span>Facebook</span>
+                  <strong id="course-facebook">-</strong>
+                </div>
+                <div>
+                  <span>Drive Folder</span>
+                  <strong id="course-drive">-</strong>
+                </div>
+              </div>
+              <div class="tag-list" id="course-tags"></div>
+            </aside>
+
+            <div class="course-feed" id="course-posts">
+              <div class="feed-header">
+                <h3>Course Posts</h3>
+              </div>
+              <div class="feed-grid" id="course-post-list"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alsun Seniors | Education System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="logo">
+          <span class="logo-mark">AS</span>
+          <div>
+            <p class="logo-title">Alsun Seniors</p>
+            <p class="logo-subtitle">Education Management</p>
+          </div>
+        </div>
+        <nav class="topbar-nav">
+          <a href="#courses">Courses</a>
+          <a href="#notifications">Notifications</a>
+          <a href="#course-view">Course Page</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div>
+            <p class="pill">Simple • Modern • Easy</p>
+            <h1>Manage courses, updates, and student communications in one elegant hub.</h1>
+            <p class="hero-text">
+              Keep every course organized with cards, notifications, and a dedicated course page. Each course has its
+              own links, resources, and post feed.
+            </p>
+            <div class="hero-actions">
+              <button class="btn primary">Browse courses</button>
+              <button class="btn ghost">View updates</button>
+            </div>
+            <div class="hero-meta">
+              <div>
+                <h3>Drive-ready</h3>
+                <p>Attach Google Drive folders for each course.</p>
+              </div>
+              <div>
+                <h3>Unified posts</h3>
+                <p>Aggregate faculty portal, Facebook, and WhatsApp posts.</p>
+              </div>
+              <div>
+                <h3>Instant alerts</h3>
+                <p>New content triggers notifications across the platform.</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card" id="hero-card">
+            <div class="hero-card-top">
+              <div>
+                <p class="hero-label">Course Activity</p>
+                <h2 id="hero-course-title">Digital Linguistics</h2>
+              </div>
+              <span class="badge" id="hero-course-badge">3 new</span>
+            </div>
+            <div class="hero-card-body">
+              <div class="stat">
+                <p>Active Doctors</p>
+                <h3 id="hero-course-doctors">4</h3>
+              </div>
+              <div class="stat">
+                <p>Resources</p>
+                <h3 id="hero-course-resources">28</h3>
+              </div>
+              <div class="stat">
+                <p>Drive Sync</p>
+                <h3 id="hero-course-drive">On</h3>
+              </div>
+            </div>
+            <div class="hero-card-footer">
+              <p id="hero-course-update">Latest update: Lecture slides uploaded 15 minutes ago.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="courses" class="section">
+          <div class="section-header">
+            <div>
+              <h2>Available Courses</h2>
+              <p>Select a course card to open its detailed page below.</p>
+            </div>
+            <div class="filters">
+              <button class="filter active">All</button>
+              <button class="filter">Linguistics</button>
+              <button class="filter">Translation</button>
+              <button class="filter">Literature</button>
+            </div>
+          </div>
+
+          <div class="course-grid" id="course-grid"></div>
+        </section>
+
+        <section id="notifications" class="section">
+          <div class="section-header">
+            <div>
+              <h2>Notifications</h2>
+              <p>New items appear here and inside each course page.</p>
+            </div>
+            <button class="btn ghost">Mark all as read</button>
+          </div>
+
+          <div class="notification-grid" id="notification-grid"></div>
+        </section>
+
+        <section id="course-view" class="section course-view">
+          <div class="section-header">
+            <div>
+              <h2 id="course-title">Course Page</h2>
+              <p id="course-subtitle">A dedicated page with details, links, and post feeds.</p>
+            </div>
+            <a class="btn ghost" id="course-open-link" href="course.html">Open course page</a>
+          </div>
+
+          <div class="course-layout">
+            <aside class="course-sidebar">
+              <h3 id="course-name">Digital Linguistics</h3>
+              <p class="muted" id="course-overview">Course overview and unlimited details.</p>
+              <div class="info-list">
+                <div>
+                  <span>Doctors</span>
+                  <strong id="course-doctors">Dr. Rania Hassan • Dr. Omar Adel</strong>
+                </div>
+                <div>
+                  <span>Faculty Portal</span>
+                  <strong id="course-portal">faculty.edu/linguistics</strong>
+                </div>
+                <div>
+                  <span>Facebook</span>
+                  <strong id="course-facebook">fb.com/linguistics</strong>
+                </div>
+                <div>
+                  <span>Drive Folder</span>
+                  <strong id="course-drive">drive.google.com/alsun/linguistics</strong>
+                </div>
+              </div>
+              <div class="tag-list" id="course-tags"></div>
+              <button class="btn primary">Request course update</button>
+            </aside>
+
+            <div class="course-feed">
+              <div class="feed-header">
+                <h3>Course Posts</h3>
+                <div class="feed-actions">
+                  <button class="btn ghost">Manual post</button>
+                  <button class="btn ghost">Scrape sources</button>
+                </div>
+              </div>
+              <div class="feed-grid" id="course-posts"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alsun Seniors | Admin Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="logo">
+          <span class="logo-mark">AS</span>
+          <div>
+            <p class="logo-title">Alsun Seniors</p>
+            <p class="logo-subtitle">Admin Portal</p>
+          </div>
+        </div>
+        <nav class="topbar-nav">
+          <a href="index.html">Home</a>
+          <a href="#admin-tools">Admin Tools</a>
+          <a href="#integrations">Integrations</a>
+        </nav>
+        <a
+          class="btn primary"
+          href="https://drive.google.com/drive/folders/1aX-sOomkddZhU6kjd2nR9q6GRLHFwOYk?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open Drive Folder
+        </a>
+      </header>
+
+      <main>
+        <section class="section admin-hero">
+          <div class="section-header">
+            <div>
+              <h2>Admin Access</h2>
+              <p>Sign in to manage courses, content feeds, and notifications.</p>
+            </div>
+            <span class="badge">Admins only</span>
+          </div>
+          <div class="admin-grid">
+            <form class="admin-card" id="admin-login">
+              <h3>Admin login</h3>
+              <label>
+                Username
+                <input type="text" name="username" placeholder="admin" required />
+              </label>
+              <label>
+                Password
+                <input type="password" name="password" placeholder="••••••••" required />
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                Remember this device
+              </label>
+              <div class="form-actions">
+                <button class="btn primary" type="submit">Sign in</button>
+                <button class="btn ghost" type="button">Request access</button>
+              </div>
+              <p class="muted" id="admin-login-status"></p>
+            </form>
+
+            <div class="admin-card">
+              <h3>Admin highlights</h3>
+              <p class="muted">
+                Every course has its own Drive folder, social feeds, and portal links. Admins can assign sources and
+                set notification rules per course.
+              </p>
+              <ul class="integration-list">
+                <li>✅ Add and remove courses</li>
+                <li>✅ Upload course cover images or icons</li>
+                <li>✅ Attach per-course Drive folders</li>
+                <li>✅ Manage posts, doctors, and resources</li>
+              </ul>
+              <button class="btn ghost" type="button">View admin guide</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="admin-tools" class="section admin is-hidden" data-admin-only>
+          <div class="section-header">
+            <div>
+              <h2>Admin Tools</h2>
+              <p>Admins can add courses, upload images, and manage integrations.</p>
+            </div>
+            <button class="btn ghost" id="refresh-integrations" type="button">Refresh all integrations</button>
+          </div>
+
+          <div class="admin-grid">
+            <form class="admin-card" id="course-form">
+              <h3>Add a new course</h3>
+              <label>
+                Course title
+                <input type="text" name="title" placeholder="e.g., Media Translation" required />
+              </label>
+              <label>
+                Category
+                <input type="text" name="category" placeholder="e.g., Translation" required />
+              </label>
+              <label>
+                Responsible doctors
+                <input type="text" name="doctors" placeholder="Add names" />
+              </label>
+              <label>
+                Faculty portal link
+                <input type="url" name="portal" placeholder="Paste portal link" />
+              </label>
+              <label>
+                Facebook link
+                <input type="url" name="facebook" placeholder="Paste Facebook link" />
+              </label>
+              <label>
+                Course Drive folder
+                <input type="url" name="drive" placeholder="Paste Drive folder link" />
+              </label>
+              <label>
+                Tags (comma-separated)
+                <input type="text" name="tags" placeholder="AI, Translation" />
+              </label>
+              <label>
+                Badge label
+                <input type="text" name="badge" placeholder="New updates" />
+              </label>
+              <label>
+                Icon (emoji)
+                <input type="text" name="icon" placeholder="📘" />
+              </label>
+              <label>
+                Cover style
+                <select name="coverClass">
+                  <option value="cover-one">Blue</option>
+                  <option value="cover-two">Purple</option>
+                  <option value="cover-three">Green</option>
+                  <option value="cover-four">Orange</option>
+                </select>
+              </label>
+              <label>
+                Summary line
+                <input type="text" name="summary" placeholder="Latest update..." />
+              </label>
+              <label>
+                Resources count
+                <input type="text" name="resources" placeholder="0" />
+              </label>
+              <label>
+                Drive status
+                <select name="driveStatus">
+                  <option value="On">On</option>
+                  <option value="Off">Off</option>
+                </select>
+              </label>
+              <label>
+                Main course information
+                <textarea name="info" placeholder="Add unlimited details"></textarea>
+              </label>
+              <div class="form-actions">
+                <button class="btn primary" type="submit">Save course</button>
+                <button class="btn ghost" type="reset">Clear form</button>
+              </div>
+              <p class="muted" id="course-form-status"></p>
+            </form>
+
+            <div class="admin-card" id="integrations" data-admin-only>
+              <h3>Integrations (coming soon)</h3>
+              <p class="muted">
+                Connect external sources for automatic posts and notifications. You will be able to assign each source
+                per course.
+              </p>
+              <ul class="integration-list">
+                <li>✅ Google Drive folder watcher</li>
+                <li>✅ Facebook page scraper</li>
+                <li>✅ Faculty portal crawler</li>
+                <li>✅ WhatsApp group listener</li>
+                <li>✅ WhatsApp notification API</li>
+              </ul>
+              <p class="muted" id="refresh-status"></p>
+            </div>
+
+            <form class="admin-card" id="cookies-form" data-admin-only>
+              <h3>Facebook scraper</h3>
+              <p class="muted">Upload the cookies file to sync posts without re-scraping history.</p>
+              <label>
+                Cookies file
+                <input type="file" name="cookies" accept=".txt" required />
+              </label>
+              <label>
+                Course ID
+                <input type="number" name="course_id" placeholder="e.g., 1" required />
+              </label>
+              <button class="btn primary" type="submit">Upload cookies</button>
+              <p class="muted" id="cookies-status"></p>
+            </form>
+
+            <form class="admin-card" id="broadcast-form" data-admin-only>
+              <h3>WhatsApp broadcast</h3>
+              <p class="muted">Send a message to all saved numbers via WAHA.</p>
+              <label>
+                Message
+                <textarea name="message" placeholder="Type your announcement"></textarea>
+              </label>
+              <button class="btn primary" type="submit">Send broadcast</button>
+              <p class="muted" id="broadcast-status"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
